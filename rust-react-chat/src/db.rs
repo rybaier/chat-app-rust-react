@@ -8,6 +8,7 @@ use uuid::Uuid;
 use crate::models::{Conversation, NewConversation, Room, RoomResponse, User};
 type DbError = Box<dyn std::error::Error + Send + Sync>;
 
+
 fn iso_date() -> String {
     let now = SystemTime::now();
     let now: DateTime<Utc> = now.into();
@@ -28,6 +29,8 @@ pub fn find_user_by_phone(
 
 pub fn insert_new_user(conn: &mut PgConnection, nm: &str, pn: &str) -> Result<User, DbError> {
     use crate::schema::users::dsl::*;
+    use uuid::Uuid;
+
     let new_user = User {
         id: Uuid::new_v4().to_string(),
         username: nm.to_owned(),
