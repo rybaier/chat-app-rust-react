@@ -2,7 +2,7 @@
 Going to make a chat app using Rust and React 
 Testing the viability of this method for multiple projects 
 
-![Tutorial Followed](https://blog.logrocket.com/real-time-chat-app-rust-react/)
+[Tutorial Followed](https://blog.logrocket.com/real-time-chat-app-rust-react/)
 
 ### Notes from building process
 - Rust - Websockets for 2way server communication
